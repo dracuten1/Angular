@@ -1,12 +1,12 @@
 pipeline {
   agent {
     node {
-      label 'angular'
+      label 'latest'
     }
 
   }
   stages {
-    stage('') {
+    stage('error') {
       steps {
         sh 'npm install'
       }
