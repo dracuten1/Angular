@@ -1,14 +1,22 @@
 pipeline {
   agent {
-    docker { image 'node:latest' }
+    node {
+      label 'angular'
+    }
+
   }
   stages {
-    stage('Install') {
-      steps { sh 'npm install' }
+    stage('') {
+      steps {
+        sh 'npm install'
+      }
     }
 
     stage('Build') {
-      steps { sh 'npm run build' }
+      steps {
+        sh 'npm run build'
+      }
     }
+
   }
 }
